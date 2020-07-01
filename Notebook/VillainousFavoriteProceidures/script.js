@@ -59,7 +59,7 @@ let movies = [
 ]
 
 window.onload = function() {
-    let sortedMovies = sortMoviesByAttr(movies, 'title')
+    let sortedMovies = sortMoviesByRank(movies)
     // Display Movies list
     displayMovies(sortedMovies);
 }
@@ -93,19 +93,19 @@ function sortMoviesByRank(movies){
   // Code from previous sortBestRatingsFirst() function
   for (let j = 0; j < movies.length - 1; j++) {
 
-      let bestMovie = movies[j];
+      let max_obj = movies[j];
       let max_location = j;
 
       for (let i = j; i < movies.length; i++) {
-          if (movies[i].rank > bestMovie.rank) {
+          if (movies[i].rank > max_obj.rank) {
               // Know max AND it's index (location)
-              bestMovie.rank = movies[i].rank
+              max_obj.rank = movies[i].rank
               max_location = i
           }
       }
       // swap the first and the last
       movies[max_location] = movies[j] // --> 10
-      movies[j] = bestMovie
+      movies[j] = max_obj
   }
 
   return movies
@@ -116,25 +116,7 @@ function sortMoviesByRank(movies){
  * @param sortAttr pass in 'id', 'title', or 'rank' to sort by
  */
 function sortMoviesByAttr(movies, sortAttr){
-  // Code from previous sortBestRatingsFirst() function
-  for (let j = 0; j < movies.length - 1; j++) {
-
-    let bestMovie = movies[j];
-    let max_location = j;
-
-    for (let i = j; i < movies.length; i++) {
-        if (movies[i][sortAttr] > bestMovie[sortAttr]) {
-            // Know max AND it's index (location)
-            bestMovie[sortAttr] = movies[i][sortAttr]
-            max_location = i
-        }
-    }
-    // swap the first and the last
-    movies[max_location] = movies[j] // --> 10
-    movies[j] = bestMovie
-}
-
-return movies
+  // CODE GOES HERE
 }
 
 
