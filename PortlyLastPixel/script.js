@@ -5,13 +5,16 @@
  * TODO: Toggle the align style for "Formatted Text" when the appropriate button is clicked
  */
 
+ let userInput = document.querySelector('#text-input')
+ let formattedOutput = document.getElementById('text-output')
+ userInput.onkeydown = updateText
 
 /**
  * Update the output text as a user types in the textarea
  * HINT: Use the onkeydown function inside HTML
  */
 function updateText(){
-  // CODE GOES HERE
+  formattedOutput.textContent = userInput.value
 }
 
 /**
