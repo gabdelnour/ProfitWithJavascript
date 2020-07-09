@@ -60,3 +60,46 @@
 // }
 
 // console.log(multiplyNumeric(menu));
+
+// // ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// function marry(man, woman) {
+//   woman.husband = man;
+//   man.wife = woman;
+
+//   return {
+//     father: man,
+//     mother: woman,
+//   };
+// }
+
+// let family = marry(
+//   {
+//     name: "John",
+//   },
+//   {
+//     name: "Ann",
+//   }
+// );
+
+// console.log(family);
+
+// // ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    alert(this.step);
+    return this;
+  },
+};
+
+ladder.up().up().down().up().down().showStep();
