@@ -97,9 +97,9 @@ let ladder = {
     return this;
   },
   showStep() {
-    alert(this.step);
+    console.log(this.step);
     return this;
   },
 };
 
-ladder.up().up().down().up().down().showStep();
+ladder.up().up().down().down().showStep();
