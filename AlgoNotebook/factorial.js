@@ -4,15 +4,20 @@
 
 n = 27;
 
-function factorial(n) {
-  let result = 1;
-  for (i = 0; i < n; i++) {
-    result = n * factorial(n - 1);
+var factorial = function (n) {
+  // base case:
+  if (n === 0) {
+    return 1;
   }
-  return result;
-}
 
-console.log(factorial(n));
+  // recursive case:
+  for (var i = 0; i < n; i++) {
+    return n * factorial(n - 1);
+  }
+};
+
+console.log("The value of 0! is " + factorial(0) + ".");
+console.log("The value of 5! is " + factorial(5) + ".");
 
 // this is iterative and also completely made by me ayayayay!!
 
