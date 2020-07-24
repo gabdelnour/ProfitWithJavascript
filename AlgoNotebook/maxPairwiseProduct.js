@@ -1,6 +1,6 @@
 let numbers = [3, 4, 5, 6, 7, 8];
 
-function maxPairwiseProduct(numbers) {
+function maxPairwiseProduct_Naive(numbers) {
   let n = numbers.length;
   let maxProduct = 0;
 
@@ -14,4 +14,4 @@ function maxPairwiseProduct(numbers) {
   return maxProduct;
 }
 
-console.log(maxPairwiseProduct(numbers));
+console.log(maxPairwiseProduct_Naive(numbers));
